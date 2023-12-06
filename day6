@@ -24,4 +24,19 @@ def read_me(text):
 number = 1
 for couple in read_me(input()):
   number *= ways(couple[0], couple[1])
+print(number)
 
+#2nd part
+#change in the input function
+def read_me(text):
+  time = re.findall('[0-9 ]+', text)[0].replace(' ', '')
+  distance = re.findall('[0-9 ]+', text)[1].replace(' ', '')
+  my_list = [int(time), int(distance)]
+  return my_list
+read_me(input())
+
+#function of ways counting rest without changes
+
+#final count
+my_number = read_me(input())
+print(ways(my_number[0], my_number[1]))
